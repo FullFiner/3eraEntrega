@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     
-    const API_URL = "http://localhost:4000/api"; 
+    const API_URL = "http://23.23.138.3:4000/api"; 
 
     const saldoValorElement = document.getElementById('saldo-valor');
     const formDeposito = document.getElementById('form-deposito');
