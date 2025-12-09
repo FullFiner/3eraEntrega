@@ -1,0 +1,66 @@
+<main id="main-userprofile">
+
+    <section class="perfil-saldo">
+
+        <section class="card-perfil">
+            <header class="perfil-header">
+                <img src="/images/creeperprofile.png" alt="Foto de perfil" class="perfil-img">
+                <div class="perfil-info">
+                    <h2>Hola, <span id="saludo-usuario">{{username}}</span>!</h2> 
+                    <ul>
+                        <li><strong>Usuario:</strong> <span id="usuario-nombre-perfil">{{username}}</span></li> 
+                        <li><strong>Email:</strong> <span id="usuario-email">{{email}}</span></li>
+                    </ul>
+                </div>
+            </header>
+        </section>
+
+        <section class="card-saldo">
+            <header>
+                <h2>Saldo Actual</h2>
+            </header>
+            <p class="monto" id="saldo-valor">{{saldo}} Fichas</p> 
+            <section class="linea-decorativa"></section>
+        </section>
+
+    </section>
+
+    <section class="card-transacciones">
+        <header>
+            <h2>Últimas 5 Transacciones</h2>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+            <tbody id="transacciones-body">
+                {{#if transacciones}}
+                    {{#each transacciones}}
+                    <tr>
+                        <td>{{this.fecha}}</td> 
+                        <td>{{this.tipo}}</td> 
+                        <td>{{this.monto}}</td> 
+                    </tr>
+                    {{/each}}
+                {{else}}
+                    <tr>
+                        <td colspan="3">Cargando transacciones...</td>
+                    </tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card-ruleta">
+        <header>
+            <h2>Acceso Rápido</h2>
+        </header>
+        <a class="btn-redireccion" href="/roulette">🎰 Ir a la Ruleta</a>
+        <a class="btn-redireccion" href="/transaction">💰 Gestionar Saldo</a>
+    </section>
+
+</main>

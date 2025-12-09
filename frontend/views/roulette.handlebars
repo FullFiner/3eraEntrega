@@ -1,0 +1,80 @@
+<main id="main-roulette">
+  <section class="gamestatus-sec">
+    <h2>Estado del juego</h2>
+    <p id="estado-juego">Esperando apuesta...</p>
+  </section>
+
+  <section class="roulette-sec">
+    <div class="roulette-container">
+      <canvas id="roulette"></canvas>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="apuesta-sec">
+      <h3>Haz tu apuesta</h3>
+
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" value="100" min="1" />
+
+      <div class="color-buttons">
+        <button class="btn" id="apostar-rojo">🔴 Rojo</button>
+        <button class="btn" id="apostar-negro">⚫ Negro</button>
+      </div>
+
+      <h4>O elige un número:</h4>
+      <div class="tabla-wrap">
+        <div class="zero-cell celda-num verde" id="celda-0">0</div>
+        <div class="grid-numeros" id="grid-numeros"></div>
+      </div>
+
+      <button class="btn" id="girar">🎯 Girar</button>
+      <p id="resultado"></p>
+    </div>
+  </section>
+
+  <section class="saldo dispo-sec">
+    <h2>Saldo disponible</h2>
+    <p class="saldo-visual">
+        $ <span id="saldo">{{saldo}}</span>
+    </p>
+  </section>
+
+  <section class="resultados-sec">
+    <div class="ultimos-numeros">
+      <h2>Últimos 5 números ganadores</h2>
+      <ul id="lista-numeros">
+        {{#each ultimosNumeros}}
+          <li class="{{this.color}}">{{this.numero}}</li>
+        {{else}}
+          
+          <li>...</li> 
+        {{/each}}
+      </ul>
+    </div>
+
+    <section class="ultimas-apuestas">
+      <h2>Últimas 5 apuestas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Apuesta</th>
+            <th>Monto</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-apuestas">
+          {{#each ultimasApuestas}}
+          <tr class="{{#if (eq this.resultado 'Ganada')}}ganada{{else if (eq this.resultado 'Perdida')}}perdida{{/if}}">
+            <td>{{this.apuesta}}</td>
+            <td>{{this.monto}}</td>
+            <td>{{this.resultado}}</td>
+          </tr>
+          {{else}}
+             <tr><td colspan="3">...</td></tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+</main>

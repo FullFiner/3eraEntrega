@@ -1,0 +1,28 @@
+<main class="main-transacciones">
+  <h1 class="transacciones-titulo">💰 Suertazo!</h1>
+
+  <section class="transacciones-formularios">
+    <form id="form-deposito" class="transacciones-card" action="/deposito" method="post">
+      <h3 class="transacciones-subtitulo">Depositar</h3>
+      <input class="transacciones-input" type="number" name="monto" placeholder="Ingrese monto" min="1" required>
+      <button class="transacciones-btn" type="submit">Depositar</button>
+    </form>
+
+    <form id="form-retiro" class="transacciones-card" action="/retiro" method="post">
+      <h3 class="transacciones-subtitulo">Retirar</h3>
+      <input class="transacciones-input" type="number" name="monto" placeholder="Ingrese monto" min="1" required>
+      <button class="transacciones-btn" type="submit">Retirar</button>
+    </form>
+  </section>
+
+  <p id="mensaje" class="transacciones-mensaje"></p>
+
+  <div class="transacciones-saldo">
+    Saldo actual: $<span id="saldo-valor">{{saldo}}</span>
+  </div>
+
+  <section class="btn-transacciones">
+    <a class="btn-redireccion" href="/userProfile">Volver al Perfil</a>
+    <a class="btn-redireccion" href="/roulette">Ir a la ruleta</a>
+  </section>
+</main>

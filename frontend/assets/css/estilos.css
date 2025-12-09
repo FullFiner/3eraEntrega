@@ -1,0 +1,1110 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/*-----------------Configuraciones generales, osea iguales en todas las paginas-------------------------------------------*/
+.btn-redireccion{
+    
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1a2a6c;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  
+}
+
+.btn-redireccion:hover{
+    background-color: #2a4dad;
+    color:white;
+}
+
+
+
+html,body{
+    height: 100%;
+    
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+.common-header{
+    background-color: #0b0f2c;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    padding: 1rem 2rem;
+    color:white;
+    
+}
+
+.common-footer{
+    background-color: #0b0f2c;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.titulos {
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+/*------------------------BeginninPage---------------------------------*/
+#main-inicio {
+    background-image: url("../images/ruletaazulada.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    padding: 2%;
+    display: flex;             
+    flex-direction: column;     
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem; 
+    height: 100%;
+    
+}
+
+.card-main-inicio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.5);
+    padding: 8mm;
+    gap: 2mm;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    
+}
+
+#btn-register-inicio{
+    width: 35%;
+    background-color: #0984e3;
+}
+
+#btn-register-inicio:hover{
+    background-color: #0652DD;
+}
+
+/*-------------------------developersinfor----------------------------------------*/
+#main-devinformation{
+    background-image: url("../images/fondoreglas.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+    
+    padding: 2%;
+    display: flex;             
+    flex-direction: column;     
+    align-items: center;
+    text-align: center;
+    gap: 1rem; 
+    height: 100%;
+    
+}
+.card-info{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+    background: linear-gradient(145deg, #1C2248, #2A335A);
+
+    
+}
+
+.card-info h2 {
+    margin-top: 0;
+    color:white;
+}
+
+.card-info p{
+    color:white;
+}
+
+.card-info ul{
+    color:white;
+}
+
+/*.linea-decorativa{
+    width: 100%;
+    height: 1mm;
+    margin-top: 1mm;
+    background-color: #FFD700;
+
+}*/
+/*-------------------------------------------------------userpro-------------------------------------------------*/
+
+#main-userprofile {
+    background-image: url("../images/perfil.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem;
+    padding: 2%;
+    background-color:#1C2248 ;
+    height: 100%;
+}
+
+
+.perfil-saldo {
+    display: flex;
+    gap: 1.5rem;
+    
+     
+}
+
+.card-perfil{
+    background-color: #2A335A;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    color:white;
+}
+.card-saldo{
+    background-color: #2A335A;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.perfil-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #BCBEC9;
+    object-fit: cover;
+}
+
+.perfil-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.perfil-info li {
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+
+.card-saldo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:white;
+}
+
+.card-saldo .monto {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.card-transacciones{
+    background-color: #2A335A;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    color:white;
+height:100%; /*cambio*/
+
+overflow:auto;
+}
+.card-ruleta{
+    background-color: #2A335A;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    color:white;
+height:100%;
+}
+
+.card-transacciones table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.card-transacciones th, 
+.card-transacciones td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.card-transacciones th {
+    background-color: #394761;
+    color: #fff;
+}
+
+.card-transacciones td {
+    background-color: #2A335A;
+    color: #fff;
+}
+/*-----------------------Roulette---------------------------*/
+
+
+/*#main-roulette {
+    background-image: url("images/sala1.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.gamestatus-sec {
+    text-align: center;
+    background: #1a1a40;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.roulette-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.roulette-sec img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+.saldo {
+    text-align: center;
+    font-size: 1.3rem;
+    background: #1a1a40;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+.resultados-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.ultimos-numeros {
+    flex: 1;
+    background: #1a1a40;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.ultimos-numeros ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ultimos-numeros li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+}
+
+
+.ultimas-apuestas {
+    flex: 2;
+    background: #1a1a40;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.ultimas-apuestas table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.ultimas-apuestas th,
+.ultimas-apuestas td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.ultimas-apuestas th {
+    background: #0f0f33;
+    font-weight: bold;
+}
+
+.ultimas-apuestas tr:nth-child(even) {
+    background: #111133;
+}*/
+
+/*-------------------------------Register---------------------------------*/
+.main-register{
+    background-image: url("../images/opcion3.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+    
+    padding: 2%;
+    display: flex;             
+    flex-direction: column;
+    justify-content: center;     
+    align-items: center;
+    text-align: center;
+    gap: 1rem; 
+    height: 100%;
+}
+
+
+.formulario-registro {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.formulario-registro h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.formulario-registro .form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.formulario-registro .form-col {
+  flex: 1;
+}
+
+.formulario-registro input[type="text"],
+.formulario-registro input[type="password"],
+.formulario-registro input[type="email"],
+.formulario-registro input[type="date"],
+.formulario-registro input[type="username"] {
+  width: 100%;
+  padding: 12px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.formulario-registro input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.formulario-registro input:focus {
+  border-color: #0984e3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+}
+
+.formulario-registro button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #0984e3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario-registro button:hover {
+  background: #0652DD;
+}
+
+.formulario-registro .recordar,
+.formulario-registro .registro {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.formulario-registro .recordar a,
+.formulario-registro .registro a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.formulario-registro .recordar a:hover,
+.formulario-registro .registro a:hover {
+  color: #0984e3;
+  text-decoration: underline;
+}
+
+
+/* -----------------------------------Login------------------------------------- */
+
+.main-login{
+    background-image: url("../images/opcion3.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+    
+    padding: 2%;
+    display: flex;             
+    flex-direction: column;
+    justify-content: center;     
+    align-items: center;
+    text-align: center;
+    gap: 1rem; 
+    height: 100%;
+}
+
+.formulario-login {
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.formulario-login h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.formulario-login input[type="text"],
+.formulario-login input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.formulario-login input:focus {
+  border-color: #0984e3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+}
+
+.formulario-login button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #0984e3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario-login button:hover {
+  background: #0652DD;
+}
+
+.formulario-login .recordar,
+.formulario-login .registro {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.formulario-login .recordar a,
+.formulario-login .registro a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.formulario-login .recordar a:hover,
+.formulario-login .registro a:hover {
+  color: #0984e3;
+  text-decoration: underline;
+}
+
+/*--------------------------------Reglas de la ruleta------------------------------*/
+
+.main-rules{
+    background-image: url("../images/fondoreglas.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+    
+    display: flex;
+    
+
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.card-rules{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    margin: 1%;
+    color:white;
+    
+    border-radius: 1rem;
+    padding: 5mm;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+    background: linear-gradient(145deg, #1C2248, #2A335A);
+}
+
+.rulesec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    gap: 4%;
+    
+}
+
+.rulesec1 p{
+    font-size: large;
+}
+
+.rulesec2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    gap: 4%;
+}
+
+.rulesec3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    gap: 4%;
+}
+
+.rulesec4{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.linea-decorativa {
+  width: 100%;
+  height: 3px;
+  margin: 1rem auto;
+  background: linear-gradient(to right, transparent, #FFD700, transparent);
+  border-radius: 2px;
+}
+
+.tabla-reglas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.tabla-reglas thead {
+  background: linear-gradient(90deg, #1C2248, #2A335A);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabla-reglas th {
+  padding: 1rem;
+}
+
+
+.tabla-reglas td {
+  padding: 0.8rem;
+  color: #fff;
+}
+
+
+.tabla-reglas tbody tr:nth-child(even) {
+  background-color: #2A335A;
+}
+
+.tabla-reglas tbody tr:nth-child(odd) {
+  background-color: #222A4A;
+}
+
+
+.tabla-reglas tbody tr:hover {
+  background-color: #394761;
+  transform: scale(1.01);
+  transition: 0.2s ease-in-out;
+}
+
+
+.tabla-reglas td:nth-child(3) {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.card-rules img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+
+#consejos article {
+  background: rgba(42, 51, 90, 0.7);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#consejos article:hover {
+  background: rgba(57, 71, 97, 0.9);
+  transform: translateX(5px);
+}
+
+#ayuda ul {
+  list-style: none;
+  padding: 0;
+}
+
+#ayuda li {
+  margin: 0.4rem 0;
+  padding: 0.5rem;
+  background: rgba(28, 34, 72, 0.7);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#ayuda strong {
+  color: #FFD700;
+}
+
+/*-----------------------------------Transacciones---------------------------------*/
+
+.main-transacciones {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:url("../images/pagos.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+
+.transacciones-titulo {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255,215,0,0.7);
+}
+
+
+.transacciones-formularios {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.transacciones-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.transacciones-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+.transacciones-subtitulo {
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+
+.transacciones-input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+
+.transacciones-btn {
+  background: #FFD700;
+  color: #1c2248;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.transacciones-btn:hover {
+  background: #e6c200;
+}
+
+
+.transacciones-saldo {
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.transacciones-saldo span {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+
+.btn-transacciones{
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/*--------------------------------Cerrar Sesion--------------------------------------*/
+.main-logout{
+
+    background-image: url("../images/dadostristongos.png");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+}
+
+.card-logout{
+    background-color: rgba(255,255,255,0.5);
+    padding:1rem;
+    border-radius:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.card-logout h2{
+    color:white;
+}
+
+.option-logout{
+    margin-top: 1mm;
+    display: flex;
+
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
+/*----------------------2daEntrega--------------------------*/
+
+
+#main-roulette {
+  background-image: url("../images/sala1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.gamestatus-sec {
+  text-align: center;
+  background: #1a1a40;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 90%;
+}
+
+.roulette-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.roulette-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+#roulette {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: #222;
+  border: 6px solid #ffcc00;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.arrow {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid #ffcc00;
+  z-index: 20;
+}
+
+.apuesta-sec {
+  background: #1a1a40;
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  max-width: 550px;
+  min-width: 450px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.apuesta-sec input {
+  margin: 8px 0;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  width: 100px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 15px;
+  background: #0f0f33;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: #2a2a60;
+}
+.btn.activo {
+  outline: 2px solid yellow;
+}
+
+.tabla-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f33;
+  border-radius: 10px;
+  padding: 6px;
+  margin-top: 10px;
+  overflow: unset;
+width:100%;/*aca*/
+}
+
+.zero-cell {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+.grid-numeros {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  justify-content: start;
+  align-content: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+.celda-num {
+  /*width: 40px;*/
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #333;
+  user-select: none;
+}
+.celda-num.rojo {
+  background-color: #d63031;
+}
+.celda-num.negro {
+  background-color: #2d3436;
+}
+.celda-num.verde {
+  background-color: green;
+}
+.celda-num.seleccionado {
+  outline: 2px solid yellow;
+  transform: scale(1.05);
+}
+
+.saldo {
+  text-align: center;
+  font-size: 1.3rem;
+  background: #1a1a40;
+  padding: 15px;
+  border-radius: 12px;
+  width: 95%;
+}
+
+.resultados-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+.ultimos-numeros,
+.ultimas-apuestas {
+  background: #1a1a40;
+  padding: 20px;
+  border-radius: 12px;
+  width: 46%;
+}
+
+.ultimos-numeros ul {
+  list-style: none;
+  padding: 0;
+}
+.ultimos-numeros li {
+  padding: 5px 0;
+  font-size: 1.1rem;
+}
+
+.ultimas-apuestas table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+.ultimas-apuestas th,
+.ultimas-apuestas td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+.ultimas-apuestas th {
+  background: #0f0f33;
+  font-weight: bold;
+}
+.ultimas-apuestas tr:nth-child(even) {
+  background: #111133;
+}
