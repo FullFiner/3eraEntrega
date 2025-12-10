@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
-// Importar rutas
+
 const apiRoutes = require('./routes/apiRoutes');
 
 const app = express();
@@ -12,9 +12,15 @@ const PORT = process.env.PORT || 4000;
 
 
 app.use(cors({
-    origin: ['http://localhost', 'http://127.0.0.1'], 
+    origin: [
+        'http://localhost', 
+        'http://127.0.0.1',
+        'http://23.23.138.3',      
+        'http://23.23.138.3:80'    
+    ], 
     credentials: true 
 }));
+
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
